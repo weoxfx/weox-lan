@@ -1,0 +1,9 @@
+[project]
+name = "weox-lan"
+version = "1.0.0"
+description = "Weox programming language"
+authors = [{name = "Weox"}]
+requires-python = ">=3.8"
+
+[project.scripts]
+weox = "weox.cli:main"
