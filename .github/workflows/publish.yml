@@ -9,15 +9,18 @@ jobs:
   publish:
     runs-on: ubuntu-latest
 
+    environment:
+      name: weox-lan
+
     permissions:
-      id-token: write  # REQUIRED for trusted publishing
+      id-token: write
       contents: read
 
     steps:
-      - name: Checkout source
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
